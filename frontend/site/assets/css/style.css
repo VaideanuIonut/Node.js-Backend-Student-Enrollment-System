@@ -1,0 +1,373 @@
+/* ===== RESETEAZĂ BAZA ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+  max-width: 90px;
+  height: auto;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links-inline {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links-inline li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.page:hover {
+  color: #43ac60;
+}
+
+.page:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #43ac60;
+  transition: width 0.3s;
+}
+
+.page:hover:after {
+  width: 100%;
+}
+
+.nav-links-inline .active-page {
+  color: #b200d3;
+}
+
+/* ===== CARUSEL ===== */
+.carusel {
+  padding-top: 56px;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+
+}
+
+.carusel .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slideShow 25s infinite;
+}
+
+.carusel .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.carusel .slide:nth-child(2) {
+  animation-delay: 5s;
+}
+.carusel .slide:nth-child(3) {
+  animation-delay: 10s;
+}
+.carusel .slide:nth-child(4) {
+  animation-delay: 15s;
+}
+.carusel .slide:nth-child(5) {
+  animation-delay: 20s;
+}
+
+.carusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ===== BUTOANE ===== */
+.buton {
+  background-color: #b200d3;
+  color: white;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  transition: all 0.5s;
+}
+
+.buton:hover {
+  background-color: #43ac60;
+}
+
+.buton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.buton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+
+.buton:hover span {
+  padding-right: 15px;
+}
+
+.buton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.join_button {
+  width: 150px;
+  height: 50px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+}
+
+/* === CONTAINER FORM === */
+.form-container {
+  max-width: 500px;
+  margin: 110px auto 60px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+/* === TITLU FORM === */
+.form-title {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+/* === FORMULAR === */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* === GRUP DE INPUT === */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* === LABEL FORM === */
+.form-label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* === INPUT === */
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-container {
+  padding: 110px 30px 30px 30px;
+  display: grid;
+  gap: 30px;
+}
+
+.contact-info,
+.contact-form,
+.map {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-media h2,
+.contact-info h2,
+.contact-form h2,
+.map h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #b200d3;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.contact-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media .icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #b200d3;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.social-media .icons a:hover {
+  background-color: #43ac60;
+}
+
+.home_container {
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+}
+
+.home_section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home_title
+{
+    color: #b200d3;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.info{
+  font-size: 20px;
+}
+
+/* ===== Evenimente ===== */
+.evenimente img{
+  border-radius: 17px;
+  width: 40%;
+}
+.evenimente{
+  padding: 110px 30px 30px 30px;
+  display: grid;
+  gap: 30px;
+}
+.evenimente h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #b200d3;
+}
+.eveniment {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ===== About us ===== */
+.about-us img{
+  border-radius: 17px;
+  width: 40%;
+}
+.about-us{
+  padding: 110px 30px 30px 30px;
+  display: grid;
+  gap: 30px;
+}
+.about-us h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #b200d3;
+}
+.despre-noi {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+ 
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnavalul Studentesc ASE</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="assets/images/logo.png" class="logo" alt="Logo">
+            <nav class="navbar-menu">
+                <ul class="nav-links-inline">
+                    <li><a href="home_page.html" class="page">HOME</a></li>
+                    <li><a href="evenimente.html" class="page">EVENIMENTE</a></li>
+                    <li><a href="about_us.html" class="page">ABOUT US</a></li>
+                    <li><a href="contact.html" class="page">CONTACT</a></li>
+                    <li><a href="inscriere.html" class="active-page">ÎNSCRIE-TE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+    <h1 class="form-title">Formular de înscriere</h1>
+
+    <form id="formular" class="student-form">
+      <div class="form-group">
+        <label for="nume" class="form-label">Nume complet:</label>
+        <input type="text" id="nume" name="Nume_Complet" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefon" class="form-label">Număr de telefon:</label>
+        <input type="tel" id="telefon" name="Nr_telefon" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="eMAIL" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="universitate" class="form-label">Universitate:</label>
+        <input type="text" id="universitate" name="Universitate" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="facultate" class="form-label">Facultate:</label>
+        <input type="text" id="facultate" name="Facultate" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="an" class="form-label">An de studiu:</label>
+        <input type="number" id="an" name="An_de_Studiu" class="form-input" required>
+      </div>
+
+      <button type="submit" class="buton">Trimite</button>
+    </form>
+
+  </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Cyber Warriors. Toate drepturile rezervate.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
