@@ -34,3 +34,8 @@ The client-side interface communicates with the API through:
 1. **Install dependencies:**
    ```bash
    npm install
+2. **Start the server:**
+   ```bash
+   npx nodemon server.js
+3.Launch the application:
+Open inscriere.html (or your main frontend file) in your browser. If you are using VS Code, it is recommended to use Live Server at http://127.0.0.1:5500.
